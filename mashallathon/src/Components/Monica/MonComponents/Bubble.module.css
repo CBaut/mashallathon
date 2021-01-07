@@ -20,9 +20,9 @@
     -moz-transform: scale(0.75);
     transform: scale(0.75);
     opacity: 0.35;
-    animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    -o-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation: moveclouds 18s linear, sideWays 2s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 18s linear, sideWays 2s ease-in-out infinite alternate;
+    -o-animation: moveclouds 18s linear, sideWays 2s ease-in-out infinite alternate;
 }
 @keyframes moveclouds { 
     0% { 
