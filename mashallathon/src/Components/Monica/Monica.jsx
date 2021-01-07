@@ -1,24 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Monica.module.css";
+import ProfilePic from "./MonComponents/ProfilePic.jsx"
+import Info from "./MonComponents/Info.jsx"
+import Button from "./MonComponents/Button.jsx"
+import Form from "./MonComponents/Form.jsx"
 
 const Monica = () => {
+  const[bubbles, setBubbles] =useState([
+    {
+      // default is array of objects
+    },
+  ])
     return (
       <div className={ style.main }>
           {/* COMPONENT 1 Name and picture */}
-        <h1>MONICA IS HERE</h1>
-        <img
-          className={style.profilePic}
-          src="https://paintingvalley.com/drawings/short-hair-girl-drawing-36.jpg"
-          alt="monica"
-        />
-        {/* COMPONENT 2 Infos */}
-        <div className={style.part2}>
-            <p><span>Education:</span> Bachelor's in Business Admin - Accounting</p>
-            <p><span>Favorite Language:</span> Python, C#</p>
-            <p><span>Hobbies:</span> Cooking, Eating, Kickboxing, Powerlifting, Coding, Anime</p>
-        </div>
+        <ProfilePic />
+        {/* COMPONENT 4 Form */}
+        <Form />
         {/* COMPONENT 3 Da Button */}
-        <button className={style.btn}>Click Me!</button>
+        <Button bubbles={bubbles} setBubbles={setBubbles} />
+        {/* COMPONENT 2 Infos */}
+        <Info />
       </div>
     )
 }
