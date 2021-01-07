@@ -22,7 +22,8 @@ const Button = ({bubbles, setBubbles}) => {
     }
     const bubbleDeleteHandler = (id) => {
         console.log(`activating bubbleHandler: ${id}`)
-        const newBubbles = bubbles.filter((boop) => boop.id !== id)
+        const newBubbles = bubbles.filter((boop, i) => i !== id)
+        console.log(newBubbles)
         setBubbles(newBubbles)
     }
     return (
@@ -32,7 +33,7 @@ const Button = ({bubbles, setBubbles}) => {
             </form>
             <div className={bubble.showBubbles}>
                 {bubbles.map((bub, i) => (
-                    <div key={i} style={bub.style} className={bubble.oneBubble} onClick={() => bubbleDeleteHandler(bub.id)}></div>
+                    <div key={i} style={bub.style} className={bubble.oneBubble} onClick={() => bubbleDeleteHandler(i)}></div>
                 ))}
             </div>
         </div>)
